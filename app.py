@@ -7,10 +7,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 app.config['SESSION_TYPE'] = 'filesystem'
 ACCOUNT_SID = "AC54d367358c44b0423ca4d6242cb689a4"
-AUTH_TOKEN = "12723b11445c1f62141e21531c850399"
+AUTH_TOKEN = "8a567851f7f89ace83e5ebf438f368a9"
 twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 Session(app)
-
 
 @app.route("/")
 def index():

@@ -56,6 +56,7 @@
                 data: {"verification-code": code},
                 success: function (data) {
                     let status = data.status;
+                    console.log(data.status)
                     switch (status){
                         case "success":
                             console.log("Code is right!");
@@ -65,10 +66,10 @@
                             message.activeHtml = "Success!";
                             message.classList.remove('display__none');
                             break;
-                        case "wrong code":
+                        case "You entered the wrong code!":
                             alert("The code you entered is wrong!");
                             break;
-                        case "no code provided":
+                        case "You need to enter a code!":
                             alert("You did not enter a code!");
                             break;
                     }
